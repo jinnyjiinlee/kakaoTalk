@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>로그인 | JinnyLab</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: 'Helvetica Neue', Pretendard, sans-serif;
+        background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+
+      .login-box {
+        background: rgba(255, 255, 255, 0.25);
+        border-radius: 20px;
+        padding: 40px;
+        width: 360px;
+        backdrop-filter: blur(12px);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        text-align: center;
+      }
+
+      .login-box h2 {
+        font-size: 24px;
+        margin-bottom: 8px;
+        color: #1f2937;
+      }
+
+      .login-box p {
+        font-size: 14px;
+        margin-bottom: 24px;
+        color: #4b5563;
+      }
+
+      input {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 16px;
+        border: none;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.8);
+        font-size: 14px;
+        transition: all 0.3s ease;
+      }
+
+      input:focus {
+        outline: none;
+        background: #fff;
+        box-shadow: 0 0 0 2px #6366f1;
+      }
+
+      button {
+        width: 100%;
+        padding: 12px;
+        background: #111827;
+        color: #fff;
+        border: none;
+        border-radius: 10px;
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
+
+      button:hover {
+        background: #000;
+      }
+
+      .footer {
+        margin-top: 16px;
+        font-size: 12px;
+        color: #9ca3af;
+      }
+    </style>
+    <script type="module" crossorigin src="/assets/index-B0ul-Bzz.js"></script>
+  </head>
+  <body>
+    <div class="login-box">
+      <h2>JinnyLab</h2>
+      <p>반복되는 업무에서 탈출하세요.<br />업무 생산성을 높이세요.</p>
+      <form id="login-form">
+        <input type="email" id="email" placeholder="이메일" required />
+        <input type="password" id="password" placeholder="비밀번호" required />
+        <button type="submit">로그인</button>
+      </form>
+      <div class="footer">© 2025 JinnyLab. All rights reserved.</div>
+    </div>
+
+  </body>
+</html>
