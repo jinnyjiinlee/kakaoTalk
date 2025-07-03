@@ -14,22 +14,31 @@
         --text-main: #1e2937;
         --text-sub: #475569;
         --accent-nav: #334155;
-        --accent-lav: #374151
+        --accent-lav: #374151;
         --accent-btn: #64748b;
         --card-bg: rgba(255, 255, 255, 0.6);
         --btn-hover: #556b78;
       }
 
-      * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Pretendard', sans-serif; }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: 'Pretendard', sans-serif;
+      }
 
       body {
         background: linear-gradient(135deg, var(--bg-start), var(--bg-end));
-        display: flex; justify-content: center; align-items: center;
-        min-height: 100vh; color: var(--text-main);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        color: var(--text-main);
       }
 
       .container {
-        width: 100%; max-width: 720px;
+        width: 100%;
+        max-width: 720px;
         background: var(--glass-bg);
         border-radius: 20px;
         padding: 40px;
@@ -43,25 +52,35 @@
         text-align: center;
         margin-bottom: 24px;
       }
-      .logo svg { width: 160px; height: auto; }
+      .logo svg {
+        width: 160px;
+        height: auto;
+      }
 
       h1 {
-        font-size: 28px; font-weight: 700;
-        color: var(--accent-nav); margin-bottom: 8px;
+        font-size: 28px;
+        font-weight: 700;
+        color: var(--accent-nav);
+        margin-bottom: 8px;
         text-align: center;
       }
 
       .subtitle {
-        font-size: 16px; color: var(--text-sub);
-        margin-bottom: 32px; text-align: center;
+        font-size: 16px;
+        color: var(--text-sub);
+        margin-bottom: 32px;
+        text-align: center;
       }
 
       h3 {
-        font-size: 18px; font-weight: 600;
-        color: var(--accent-nav); margin-top: 32px;
+        font-size: 18px;
+        font-weight: 600;
+        color: var(--accent-nav);
+        margin-top: 32px;
       }
 
-      textarea, input[type='file'] {
+      textarea,
+      input[type='file'] {
         width: 100%;
         padding: 14px;
         margin-top: 10px;
@@ -73,40 +92,57 @@
 
       input[type='file']::file-selector-button {
         background: var(--text-sub);
-        border: none; color: var(--bg-end);
-        padding: 8px 14px; border-radius: 8px;
-        cursor: pointer; font-weight: 600;
+        border: none;
+        color: var(--bg-end);
+        padding: 8px 14px;
+        border-radius: 8px;
+        cursor: pointer;
         font-weight: 400;
       }
 
       .btn-primary {
         display: block;
-        width: 100%; text-align: center;
+        width: 100%;
+        text-align: center;
         padding: 14px 0;
         margin-top: 24px;
-        font-size:16px; font-weight:400;
-        color: #fff; background: var(--accent-btn);
-        border:none; border-radius: 12px;
+        font-size: 16px;
+        font-weight: 400;
+        color: #fff;
+        background: var(--accent-btn);
+        border: none;
+        border-radius: 12px;
         background-color: #1e2937;
-        cursor:pointer; transition: background 0.3s;
+        cursor: pointer;
+        transition: background 0.3s;
       }
-      .btn-primary:hover { background: var(--btn-hover); }
+      .btn-primary:hover {
+        background: var(--btn-hover);
+      }
 
       .result-section {
         margin-top: 32px;
         background: var(--card-bg);
         border-radius: 16px;
         padding: 24px;
-        box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
         border: 1px solid var(--glass-border);
       }
       .result-section h3 {
-        font-size: 17px; font-weight:600;
+        font-size: 17px;
+        font-weight: 600;
         color: var(--accent-nav);
-        margin-bottom:12px;
+        margin-bottom: 12px;
       }
-      ul { padding-left:20px; margin:0; }
-      li { font-size:14px; margin-bottom:6px; color:var(--text-main); }
+      ul {
+        padding-left: 20px;
+        margin: 0;
+      }
+      li {
+        font-size: 14px;
+        margin-bottom: 6px;
+        color: var(--text-main);
+      }
 
       .copy-button {
         background: transparent;
@@ -115,9 +151,9 @@
         padding: 10px 20px;
         border-radius: 8px;
         font-weight: 600;
-        cursor:pointer;
+        cursor: pointer;
         transition: background 0.3s, color 0.3s;
-        margin-top:12px;
+        margin-top: 12px;
       }
       .copy-button:hover {
         background: var(--accent-btn);
@@ -125,10 +161,10 @@
       }
 
       footer {
-        margin-top:40px;
-        text-align:center;
+        margin-top: 40px;
+        text-align: center;
         color: var(--text-sub);
-        font-size:13px;
+        font-size: 13px;
       }
     </style>
   </head>
@@ -146,8 +182,8 @@
       <h1>카카오톡 톡방 입장 확인 자동 프로그램</h1>
       <p class="subtitle">수강생 입장 체크, 클릭 한 번으로 완성하세요.</p>
 
-      <h3>1. 카톡 .csv 업로드</h3>
-      <input type="file" id="csvFile" accept=".csv" />
+      <h3>1. 카톡 .txt 또는 .csv 업로드</h3>
+      <input type="file" id="csvFile" accept=".csv, .txt" />
 
       <h3>2. 수강생 명단 입력</h3>
       <textarea
@@ -180,44 +216,74 @@
 
     <script type="module">
       import { supabase } from './supabase.js';
+      import Papa from 'https://cdn.jsdelivr.net/npm/papaparse@5.4.1/+esm';
 
       const {
         data: { session },
       } = await supabase.auth.getSession();
       if (!session) {
-        // 로그인 안 된 상태면 auth.html로 이동
         window.location.href = 'index.html';
       }
-
-      import Papa from 'https://cdn.jsdelivr.net/npm/papaparse@5.4.1/+esm';
 
       window.processAttendance = () => {
         const file = document.getElementById('csvFile').files[0];
         const raw = document.getElementById('studentList').value.trim();
+
         if (!file || !raw) {
-          alert('CSV 파일과 명단을 모두 입력해주세요.');
+          alert('CSV 또는 TXT 파일과 명단을 모두 입력해주세요.');
           return;
         }
 
         const list = raw.split('\n').map((n) => n.trim());
-        Papa.parse(file, {
-          header: true,
-          complete: (res) => {
-            const joined = [...new Set(res.data.filter((r) => r.Message?.includes('들어왔습니다')).map((r) => r.User))];
-            const present = list.filter((n) => joined.includes(n));
-            const absent = list.filter((n) => !joined.includes(n));
-            const extra = joined.filter((n) => !list.includes(n));
+        const ext = file.name.split('.').pop().toLowerCase();
 
-            document.getElementById('presentCount').textContent = present.length;
-            document.getElementById('absentCount').textContent = absent.length;
-            document.getElementById('extraCount').textContent = extra.length;
-
-            document.getElementById('presentList').innerHTML = present.map((n) => `<li>${n}</li>`).join('');
-            document.getElementById('absentList').innerHTML = absent.map((n) => `<li>${n}</li>`).join('');
-            document.getElementById('extraList').innerHTML = extra.map((n) => `<li>${n}</li>`).join('');
-          },
-        });
+        if (ext === 'csv') {
+          Papa.parse(file, {
+            header: true,
+            complete: (res) => {
+              const joined = [...new Set(
+                res.data
+                  .filter((r) => r.Message?.includes('들어왔습니다'))
+                  .map((r) => r.User?.split('/')[0].trim())
+              )];
+              displayResults(list, joined);
+            },
+          });
+        } else if (ext === 'txt') {
+          const reader = new FileReader();
+          reader.onload = () => {
+            const lines = reader.result.split('\n');
+            const joinedSet = new Set();
+            for (const line of lines) {
+              if (line.includes('들어왔습니다')) {
+                const match = line.match(/(.+?)(\/\d+)?님이 들어왔습니다/);
+                if (match && match[1]) {
+                  joinedSet.add(match[1].trim());
+                }
+              }
+            }
+            const joined = Array.from(joinedSet);
+            displayResults(list, joined);
+          };
+          reader.readAsText(file, 'utf-8');
+        } else {
+          alert('지원되지 않는 파일 형식입니다. .csv 또는 .txt 파일을 사용해주세요.');
+        }
       };
+
+      function displayResults(list, joined) {
+        const present = list.filter((n) => joined.includes(n));
+        const absent = list.filter((n) => !joined.includes(n));
+        const extra = joined.filter((n) => !list.includes(n));
+
+        document.getElementById('presentCount').textContent = present.length;
+        document.getElementById('absentCount').textContent = absent.length;
+        document.getElementById('extraCount').textContent = extra.length;
+
+        document.getElementById('presentList').innerHTML = present.map((n) => `<li>${n}</li>`).join('');
+        document.getElementById('absentList').innerHTML = absent.map((n) => `<li>${n}</li>`).join('');
+        document.getElementById('extraList').innerHTML = extra.map((n) => `<li>${n}</li>`).join('');
+      }
 
       window.copyToClipboard = (id) => {
         const names = Array.from(document.getElementById(id).children)
